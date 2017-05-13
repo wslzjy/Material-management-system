@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFF"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/subpage_title_bar" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_contact_top"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_clock" />
+
+        <TextView
+            android:id="@+id/contact_updatetime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="#333333" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listview_contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:divider="#FFF"
+        android:dividerHeight="3dp"
+        android:gravity="center_horizontal"></ListView>
+
+    <!--<ListView-->
+    <!--android:id="@+id/listview_contact"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"></ListView>-->
+</LinearLayout>

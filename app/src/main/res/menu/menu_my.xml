@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MyActivity">
+    <!--<item-->
+    <!--android:id="@+id/action_contact"-->
+    <!--android:orderInCategory="100"-->
+    <!--android:title="应急号码"-->
+    <!--app:showAsAction="never" />-->
+    <!--<item-->
+    <!--android:id="@+id/action_update_passwd"-->
+    <!--android:orderInCategory="100"-->
+    <!--android:title="修改密码"-->
+    <!--app:showAsAction="never" />-->
+    <!--<item-->
+    <!--android:id="@+id/action_low_battery"-->
+    <!--android:orderInCategory="100"-->
+    <!--android:title="低电量提醒"-->
+    <!--app:showAsAction="never" />-->
+    <item
+        android:id="@+id/action_check_update"
+        android:orderInCategory="100"
+        android:title="检查更新"
+        app:showAsAction="never" />
+</menu>

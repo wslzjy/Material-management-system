@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="frag0_tab_titles">
+        <item>&#160;&#160;&#160;&#160;&#160;&#160;库存情况查询&#160;&#160;&#160;&#160;&#160;&#160;</item>
+    </string-array>
+    <string-array name="frag1_tab_titles">
+        <item>&#160;&#160;&#160;&#160;&#160;&#160;个人领用情况&#160;&#160;&#160;&#160;&#160;&#160;</item>
+    </string-array>
+    <string-array name="frag3_tab_titles">
+        <item>&#160;&#160;&#160;&#160;&#160;&#160;手环管理&#160;&#160;&#160;&#160;&#160;&#160;</item>
+    </string-array>
+    <string-array name="frag4_tab_titles">
+        <item>&#160;&#160;&#160;&#160;&#160;&#160;应急号码&#160;&#160;&#160;&#160;&#160;&#160;</item>
+    </string-array>
+    <string-array name="frag5_tab_titles">
+        <item>&#160;&#160;&#160;&#160;&#160;&#160;低电量提醒&#160;&#160;&#160;&#160;&#160;&#160;</item>
+    </string-array>
+    <string-array name="frag7_tab_titles">
+        <item>&#160;&#160;&#160;&#160;&#160;&#160;扫一扫&#160;&#160;&#160;&#160;&#160;&#160;</item>
+    </string-array>
+    <string-array name="frag6_tab_titles">
+        <item>&#160;&#160;&#160;&#160;&#160;&#160;关机人员信息&#160;&#160;&#160;&#160;&#160;&#160;</item>
+    </string-array>
+    <string-array name="userroles">
+        <item>管理用户</item>
+        <item>普通用户</item>
+    </string-array>
+</resources>

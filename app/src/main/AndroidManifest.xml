@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.ilell.manage"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="com.project.ble.service" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".WelcomeActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ScanActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".ForgetPasswdActivity" />
+        <activity android:name=".activitymain.ActivityLeader" />
+        <activity android:name=".activitymain.ActivityPersonal" />
+        <activity android:name=".activitymain.ActivityBind" />
+        <activity android:name=".activitymain.ActivityUnBind" />
+        <activity android:name=".activitymain.ActivityPhoneNum" />
+        <activity android:name=".activitymain.ActivityLowBattery" />
+        <activity android:name=".activitymain.ActivityInfo" />
+        <activity android:name=".activitymain.ActivityScanCode" />
+        <activity android:name=".activityaction.ContactListActivity" />
+        <activity android:name=".activityaction.ContactAddActivity" />
+        <activity android:name=".activityaction.UpdatePasswdActivity" />
+        <activity android:name=".activityaction.LowBatteryActivity" />
+
+        <!-- 后台服务 -->
+        <!-- 自动扫描设备 -->
+        <service
+            android:name="com.veryfit.multi.service.BleConnectService"
+            android:permission="com.project.ble.service" />
+        <service
+            android:name=".service.BandService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".service.BaseService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".service.IncomingCallService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".service.BatteryService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".service.EmergencyCallService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".service.SyncBandService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <!-- 广播接收，关机,低电量广播，解锁 -->
+        <receiver android:name=".service.MyReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_SHUTDOWN" />
+                <action android:name="android.intent.action.BATTERY_LOW" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".ShowScanMsgActivity"></activity>
+    </application>
+
+</manifest>
